@@ -84,8 +84,65 @@
     margin-top:20px;
   }
 </style>
+
+  <head>
+<style>
+/* 🦋 Romantic Butterfly Container */
+.butterflies {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* 🦋 Butterfly Image */
+.butterfly {
+  position: absolute;
+  bottom: -120px;
+  width: 70px;
+  opacity: 0.8;
+  animation: slowFly 18s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(255, 182, 193, 0.6));
+}
+
+/* 🦋 Slow Romantic Movement */
+@keyframes slowFly {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+  30% {
+    transform: translateY(-30vh) translateX(-20px) rotate(10deg) scale(1.1);
+    opacity: 0.9;
+  }
+  60% {
+    transform: translateY(-60vh) translateX(20px) rotate(-10deg) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(0) rotate(5deg) scale(0.95);
+    opacity: 0.3;
+  }
+}
+</style>
+  </head>
+  
 </head>
 <body>
+
+  <!-- 🦋 Romantic Butterflies -->
+<div class="butterflies">
+  <img src="Butterflies.png" class="butterfly" style="left:10%; animation-delay:0s;">
+  <img src="Butterflies.png" class="butterfly" style="left:30%; animation-delay:3s;">
+  <img src="Butterflies.png" class="butterfly" style="left:50%; animation-delay:6s;">
+  <img src="Butterflies.png" class="butterfly" style="left:70%; animation-delay:2s;">
+  <img src="Butterflies.png" class="butterfly" style="left:90%; animation-delay:5s;">
+</div>
+  
 
 <div class="card">
 
@@ -124,6 +181,6 @@
   </video>
 
 </div>
-
+  
 </body>
 </html>
